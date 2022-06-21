@@ -1,0 +1,47 @@
+1. Change L6_student.c Put your code between: 
+	
+	//***Student_code_start*** 
+	//    Your code...
+	//    ...
+        //    ...
+	//***Student_code_end*****
+
+   Don't change other code.
+
+2. You need to write following functions:
+
+	void m_seq(double preambleI[], double preambleQ[], int len, int Nid_2)
+
+	void auto_corr(double* inI, double* inQ, int lenIN, double* outI, double* outQ, double* normalizingValue)
+		
+	int find_max_index(double* inputArray, int len)
+
+	int timing_synch(double* inI, double* inQ, int lenIN)
+	
+	double carrier_freq_estimation_fractional(double* inI, double* inQ, int lenIN)
+	
+	int find_peak_index(double* inI, double* inQ, int lenIN)
+	
+	int carrier_freq_estimation_integer(double* rxSymI, double* rxSymQ, int seqLen, int syncSigStartIndex, int Nid_2)
+	
+	void cross_corr(double* hI, double* hQ, int lenH, double* inI, double* inQ, 
+        int lenIN, double* outI, double* outQ, int lenOUT)
+	
+3. Please make sure you have the latest version of "gcc"
+
+4. Compile with command line:
+	make
+
+5. Excute with command line.
+	./L6_ofdm_freq_sync qpsk mmse 1 5000
+	
+	or 
+	
+	./L6_ofdm_timing_sync qpsk mmse 1 5000
+	
+   E.g.:  5000 is blocknumber, more takes more time but more accurated. 1 is number of taps of frequency-selective fading.
+   Your result will store in a .txt file in /result.
+
+6. Plot your graph with Python script in /result/plot_ber.py  
+
+
