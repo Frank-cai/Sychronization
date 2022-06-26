@@ -237,7 +237,7 @@ int main(int argc, char** argv) {
             // TIMING OFFSET
             // generate random timing offset for each block and apply it to each block
             timingOffsetValue = rand() % burstLen;
-
+            
             for (int i = 0; i < slotLen * (SYMBOLS_PER_BLOCK + CP_LEN); i++) {
                 rxSymOffsetI[i + timingOffsetValue] = rxSymI[i];
                 rxSymOffsetQ[i + timingOffsetValue] = rxSymQ[i];
